@@ -1,4 +1,4 @@
-input: 'cabbac' # try a, ab, bb, babab
+input: 'cabbac'
 blank: ' '
 start state: start
 synonyms:
