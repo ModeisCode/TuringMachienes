@@ -4,8 +4,6 @@ start state: start
 synonyms:
   accept: {R: accept}
   reject: {R: reject}
-# A palindrome is either the empty string, a single symbol,
-# or a (shorter) palindrome with the same symbol added to both ends.
 table:
   start:
     a: {write: ' ', R: haveA}
@@ -22,13 +20,13 @@ table:
     [a,b,c]: R
     ' ': {L: matchC}
   matchA:
-    a: {write: ' ', L: back} # same symbol at both ends
+    a: {write: ' ', L: back} 
     b: reject
     c: reject
     ' ': accept # single symbol
   matchB:
     a: reject
-    b: {write: ' ', L: back} # same symbol at both ends
+    b: {write: ' ', L: back} 
     c: reject
     ' ': accept # single symbol
   matchC:
