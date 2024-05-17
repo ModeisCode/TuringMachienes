@@ -9,7 +9,7 @@ table:
     a: {write: ' ', R: haveA}
     b: {write: ' ', R: haveB}
     c: {write: ' ', R: haveC}
-    ' ': accept # empty string
+    ' ': accept
   haveA:
     [a,b,c]: R
     ' ': {L: matchA}
@@ -23,12 +23,12 @@ table:
     a: {write: ' ', L: back} 
     b: reject
     c: reject
-    ' ': accept # single symbol
+    ' ': accept
   matchB:
     a: reject
     b: {write: ' ', L: back} 
     c: reject
-    ' ': accept # single symbol
+    ' ': accept 
   matchC:
     a: reject
     b: reject
