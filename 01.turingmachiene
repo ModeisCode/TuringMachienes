@@ -1,0 +1,23 @@
+# equal 0's and 1's : 0^n1^n
+input: '000111'
+blank: ' '
+start state: start
+synonyms:
+  accept: {R: accept}
+  reject: {R: reject}
+table:
+  start:
+    [1,' ']: reject
+    'X': accept
+    0: {write: 'X' , R: q0 }
+  q0:
+    [0,1]: R
+    [' ','X']: {L: q1}
+  q1:
+    [0]: reject
+    1: {write: 'X' , L: q2}
+  q2:
+    [0,1]: L
+    'X': {R: start}
+  reject:
+  accept:
